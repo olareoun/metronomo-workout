@@ -19,6 +19,7 @@ APP.init = function(){
 };
 
 MT.play = function(){
+    $('#status').html("started");
     var sounds = [0, 0, 0, 1];
     var index = 0;
     setInterval(function(){
