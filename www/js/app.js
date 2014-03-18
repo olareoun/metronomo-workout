@@ -20,8 +20,10 @@ APP.init = function(){
 
 MT.play = function(){
     console.log(getPath());
-    var sound = new Media(getPath() + 'sounds/PingHi.mp3');
-    media.play();
+    var sound = new Media(getPath() + 'sounds/PingHi.mp3',
+        function(){ alert("dabuti"); }, 
+        function(){ alert("fatal"); });
+    sound.play();
     // $('#status').html("started");
     // var sounds = [0, 0, 0, 1];
     // var index = 0;
