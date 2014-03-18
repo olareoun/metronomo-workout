@@ -19,7 +19,8 @@ APP.init = function(){
 };
 
 MT.play = function(){
-    var sound = new Media('/android_asset/www/sounds/PingHi.mp3');
+    console.log(getPath());
+    var sound = new Media(getPath() + 'sounds/PingHi.mp3');
     media.play();
     // $('#status').html("started");
     // var sounds = [0, 0, 0, 1];
@@ -34,3 +35,9 @@ MT.play = function(){
 $(function() {
   APP.init();
 });
+
+        function getPath() {
+            var str = location.pathname;
+            var i = str.lastIndexOf('/');
+            return str.substring(0,i+1);
+        }
