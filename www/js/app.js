@@ -19,14 +19,16 @@ APP.init = function(){
 };
 
 MT.play = function(){
-    $('#status').html("started");
-    var sounds = [0, 0, 0, 1];
-    var index = 0;
-    setInterval(function(){
-        if (index >= sounds.length) index = 0;
-        $("#audio" + sounds[index])[0].play();
-        index++;
-    }, 60000 / $('#bpm').val());
+    var sound = new Media('/android_asset/www/sounds/PingHi.mp3');
+    media.play();
+    // $('#status').html("started");
+    // var sounds = [0, 0, 0, 1];
+    // var index = 0;
+    // setInterval(function(){
+    //     if (index >= sounds.length) index = 0;
+    //     $("#audio" + sounds[index])[0].play();
+    //     index++;
+    // }, 60000 / $('#bpm').val());
 };
 
 $(function() {
