@@ -23,17 +23,42 @@
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+<!--         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+ -->        <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+        <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.css">
+
+
         <title>Hello World</title>
     </head>
     <body>
         <div class="container">
-            <audio controls id="audio">
-              <source src="sounds/MetroBar1.wav">
-            </audio> 
+            <div id="metro-controls">
+<p>
+  <label for="amount">Bpm:</label>
+  <input type="text" id="bpm" style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+ 
+<div id="slider"></div>
+
+                <button class="btn btn-warning" id="start">Start</button>
+                <div id="status"></div>
+            </div>
+            <div id="sounds">
+                <audio controls id="audio0">
+                  <source src="sounds/PingLow.wav">
+                  <source src="sounds/PingLow.mp3">
+                  <source src="sounds/PingLow.mp4a">
+                </audio> 
+                <audio controls id="audio1">
+                  <source src="sounds/PingHi.wav">
+                  <source src="sounds/PingHi.mp3">
+                  <source src="sounds/PingHi.mp4a">
+                </audio> 
+            </div>
         </div>
         <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/jquery.ui.custom.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="phonegap.js"></script>
     </body>
 </html>
